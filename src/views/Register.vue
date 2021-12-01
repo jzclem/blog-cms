@@ -134,9 +134,8 @@
 
 		.form-box {
 			position: absolute;
-			right: 100px;
-			top: 50%;
-			transform: translateY(-50%);
+      left: calc(50% - 180px);
+      top: calc(50% - 280px);
 			background-color: white;
 			border-radius: 4px;
 			font-size: 14px;
