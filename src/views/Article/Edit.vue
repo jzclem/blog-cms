@@ -73,27 +73,16 @@
 				// 二级分类选项
 				options_2nd: [],
 				editor: null,
-				rules: {
-					title: [
-						{ type: "string", required: true, message: '请输入文章标题', trigger: 'blur' },
-						{ min: 3, max: 40, message: '文章标题长度在 3 到 40 个字符', trigger: 'blur' }
-					],
-					description: [
-						{ type: "string", required: true, message: '请输入文章描述', trigger: 'blur' },
-					],
-					cate_1st: [
-						{ type: "number", required: true, message: '请选择一级分类', trigger: 'change' },
-					],
-					cate_2nd: [
-						{ type: "number", required: true, message: '请选择二级分类', trigger: 'change' },
-					],
-					main_photo: [
-						{ type: "string", required: true, message: '请上传文章主图', trigger: 'change' },
-					],
-					content: [
-						{ type: "string", required: true, message: '请填写文章内容', trigger: 'blur' },
-					]
-				}
+        rules: {
+          title: [
+            { type: 'string', required: true, message: '请输入文章标题', trigger: 'blur' },
+            { min: 3, max: 40, message: '文章标题长度在 3 到 40 个字符', trigger: 'blur' },
+          ],
+          description: [{ type: 'string', required: true, message: '请输入文章描述', trigger: 'blur' }],
+          cate_1st: [{ type: 'number', required: true, message: '请选择一级分类', trigger: 'change' }],
+          cate_2nd: [{ type: 'number', required: true, message: '请选择二级分类', trigger: 'change' }],
+          content: [{ type: 'string', required: true, message: '请填写文章内容', trigger: 'blur' }],
+        },
 			}
 		},
 		created() {

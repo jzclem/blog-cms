@@ -19,7 +19,7 @@
 	import NavBar from '@/components/Navbar.vue';
 	export default {
 		components: {
-      		SideBar,
+      SideBar,
 			NavBar
 		}
 	}
