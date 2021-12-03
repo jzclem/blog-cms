@@ -27,7 +27,7 @@
 				<el-input v-model.trim="form.email"></el-input>
 			</el-form-item>
 			<el-form-item label="头像" prop="avatar">
-				<single-upload :src.sync="form.avatar" default-image="http://localhost:4001/images/avatar/default.jpg"
+				<single-upload :src.sync="form.avatar" default-image="http://api.raner.top/images/avatar/default.jpg"
 					upload-action="/upload/common/" remove-action="/upload/remove/" :headers="headers"
 					:data="{ type: 'avatar' }">
 				</single-upload>

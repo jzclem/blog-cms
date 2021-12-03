@@ -4,7 +4,7 @@ import axios from 'axios';
 let list = (params) => axios.get('/article/list', { params });
 
 // 发布文章
-let release = (data) => axios.post('/article/add', data);
+let release = (data) => axios.post('/article/release', data);
 
 // 删除文章
 let remove = (data) => axios.post('/article/remove', data);
