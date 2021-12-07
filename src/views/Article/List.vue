@@ -30,6 +30,16 @@
         </template>
       </el-table-column>
     </el-table>
+    <el-pagination
+      style="margin-top: 16px"
+      background
+      :total="total"
+      :current-page.sync="pageIndex"
+      :page-size.sync="pageSize"
+      :page-sizes="pageSizes"
+      @current-change="loadList()"
+      @size-change="loadList()"
+      layout="->, prev, pager, next, sizes, jumper"/>
   </el-card>
 </template>
 <script>
@@ -38,6 +48,10 @@
   export default {
     data () {
       return {
+        total: 0,
+        pageIndex: 1,
+        pageSize: 10,
+        pageSizes: [5, 10, 20, 30, 50],
         tableData: [],
       }
     },
@@ -48,8 +62,9 @@
     },
     methods: {
       async loadList () {
-        let { status, data, total } = await Article.list({ pageindex: 1, pagesize: 30 })
+        let { status, data, total } = await Article.list({ pageindex: this.pageIndex, pagesize: this.pageSize })
         if (status) {
+          this.total = total
           this.tableData = data
         }
       },
